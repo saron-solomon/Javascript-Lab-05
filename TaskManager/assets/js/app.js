@@ -75,18 +75,27 @@ function clearAllTasks() {
 
 function filterTasks(e) {
 
-    /*  
-    Instruction for Handling the Search/filter 
-    
-    1. Receive the user input from the text input 
-    2. Assign it to a variable so the us can reuse it 
-    3. Use the querySelectorAll() in order to get the collection of li which have  .collection-item class 
-    4. Iterate over the collection item Node List using forEach
-    5. On each element check if the textContent of the li contains the text from User Input  [can use indexOf]
-    6 . If it contains , change the display content of the element as block , else none
-    
-    
-    */
+
+    if (filter.value === '') {
+        filter.style.borderColor = "red";
+
+        return;
+    }
+
+    e.preventDefault();
+
+    const userInput = filter.value;
+    const results = document.querySelectorAll('.collection-item');
+
+    results.forEach(result => {
+        if (result.textContent === userInput) {
+            result.style.display = 'block';
+        } else {
+            result.style.display = 'none';
+        }
+
+    });
+
 
 }
 
