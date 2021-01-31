@@ -1,14 +1,12 @@
-// Define UI Variables 
-const taskInput = document.querySelector('#task'); //the task input text field
-const form = document.querySelector('#task-form'); //The form at the top
-const filter = document.querySelector('#filter'); //the task filter text field
-const taskList = document.querySelector('.collection'); //The UL
-const clearBtn = document.querySelector('.clear-tasks'); //the all task clear button
 
-const reloadIcon = document.querySelector('.fa'); //the reload button at the top navigation 
-
-// Add Event Listener  [Form , clearBtn and filter search input ]
-
+const taskInput = document.querySelector('#task');
+const form = document.querySelector('#task-form');
+const filter = document.querySelector('#filter');
+const taskList = document.querySelector('.collection');
+const clearBtn = document.querySelector('.clear-tasks');
+const reloadIcon = document.querySelector('.fa');
+const asc = document.querySelector('.ascending');
+const desc = document.querySelector('.descending');
 
 form.addEventListener('submit', addNewTask);
 
@@ -20,6 +18,9 @@ taskList.addEventListener('click', removeTask);
 
 reloadIcon.addEventListener('click', reloadPage);
 
+ascending.addEventListener('click', sortTasks);
+
+descending.addEventListener('click', sortTasks);
 
 
 
@@ -95,6 +96,26 @@ function filterTasks(e) {
         }
 
     });
+
+
+}
+
+
+function sortTasks() {
+
+    const tasks = document.querySelectorAll('.collection-item');
+    if (tasks) {
+        taskList.removeChild(taskList.firstChild);
+        var i = tasks.length;
+        while (i--) {
+            taskList.appendChild(tasks[i]);
+        }
+
+
+    }
+
+    ascending.classList.toggle("disabled");
+    descending.classList.toggle("disabled");
 
 
 }
