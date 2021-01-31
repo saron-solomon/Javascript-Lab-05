@@ -1,21 +1,19 @@
 
-const href = document.querySelector('#1');
-const protocol = document.querySelector('#2');
-const host = document.querySelector('#3');
-const port = document.querySelector('#4');
-const hostname = document.querySelector('#5');
-const appname = document.querySelector('#6');
-const appversion = document.querySelector('#7');
-const platform = document.querySelector('#8');
-const language = document.querySelector('#9');
-const cookieenabled = document.querySelector('#10');
-const height = document.querySelector('#11');
-const width = document.querySelector('#12');
-const pixeldepth = document.querySelector('#13');
-const length = document.querySelector('#14');
-const state = document.querySelector('#15');
-
-
+const href = document.querySelector('#href');
+const protocol = document.querySelector('#protocol');
+const host = document.querySelector('#host');
+const port = document.querySelector('#port');
+const hostname = document.querySelector('#hostname');
+const appname = document.querySelector('#appname');
+const appversion = document.querySelector('#appversion');
+const platform = document.querySelector('#platform');
+const language = document.querySelector('#language');
+const cookieenabled = document.querySelector('#cookieenabled');
+const height = document.querySelector('#height');
+const width = document.querySelector('#width');
+const pixeldepth = document.querySelector('#pixeldepth');
+const length = document.querySelector('#length');
+const state = document.querySelector('#state');
 
 
 
