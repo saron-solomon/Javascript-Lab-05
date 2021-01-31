@@ -1,5 +1,5 @@
 var btns = document.querySelectorAll('#calculator span');
-var operators = ['+', '-', 'x', '÷'];
+var operators = ['+', '-', '*', '/'];
 var decAdded = false;
 
 for (var i = 0; i < btns.length; i++) {
