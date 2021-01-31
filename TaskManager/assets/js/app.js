@@ -5,8 +5,8 @@ const filter = document.querySelector('#filter');
 const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
 const reloadIcon = document.querySelector('.fa');
-const asc = document.querySelector('.ascending');
-const desc = document.querySelector('.descending');
+const ascending = document.querySelector('.ascending');
+const descending = document.querySelector('.descending');
 
 form.addEventListener('submit', addNewTask);
 
